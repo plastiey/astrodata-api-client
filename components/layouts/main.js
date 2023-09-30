@@ -11,11 +11,11 @@ const Main = ({ children, router }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Державний університет інформаційно-комунікаційних технологій"
+          content="magneconn"
         />
         <meta
           name="author"
-          content="Клуб Інженерії та Розробки Програмного Забезпечення"
+          content="magneconn team"
         />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -25,14 +25,14 @@ const Main = ({ children, router }) => {
         <link rel="icon" type="image/png" href="/favicon-16x16.png" />
         <meta
           property="og:site_name"
-          content="Клуб Інженерії та Розробки Програмного Забезпечення"
+          content="magneconn"
         />
         <meta
           name="og:title"
-          content="Клуб Інженерії та Розробки Програмного Забезпечення"
+          content="magneconn"
         />
         <meta property="og:type" content="website" />
-        <title>Клуб Інженерії та Розробки Програмного Забезпечення</title>
+        <title>magneconn</title>
       </Head>
 
       <NavBar path={router.asPath} />
