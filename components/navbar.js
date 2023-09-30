@@ -77,15 +77,20 @@ const Navbar = (props) => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem
-            href="info"
-            path={path}
-          >
+
+          <LinkItem href="/" path={path}>
+            homepage
+          </LinkItem>
+
+          <LinkItem href="info" path={path}>
             info
           </LinkItem>
-          <LinkItem href="/about-us" path={path}>
+
+
+          <LinkItem href="/about" path={path}>
             about us
           </LinkItem>
+
           <LinkItem
             target="_blank"
             href="https://github.com/kenjitheman/projx"
@@ -112,10 +117,13 @@ const Navbar = (props) => {
                 aria-label="Options"
               />
               <MenuList>
+                <MenuItem as={MenuLink} href="/" ml={5} >
+                  homepage
+                </MenuItem>
                 <MenuItem as={MenuLink} href="/info" ml={5} >
                   info
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/about-us" ml={5} >
+                <MenuItem as={MenuLink} href="/about" ml={5} >
                   about us
                 </MenuItem>
                 <MenuItem
@@ -125,10 +133,7 @@ const Navbar = (props) => {
                 >
                   api
                 </MenuItem>
-                <MenuItem
-                  as={Link}
-                  href="https://github.com/kenjitheman/projx.c"
-                >
+                <MenuItem as={MenuLink} href="https://github.com/kenjitheman/projx.c" ml={5}>
                   source code
                 </MenuItem>
               </MenuList>
