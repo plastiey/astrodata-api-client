@@ -1,9 +1,9 @@
-## Software Engineering and Development Club's website
+## プロジェクト X のクライアント要素
 
 ## installation
 
 ```
-git clone https://github.com/kenjitheman/seadclub
+git clone https://github.com/kenjitheman/projx.c
 ```
 
 - install all dependencies
