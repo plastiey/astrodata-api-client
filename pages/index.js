@@ -22,6 +22,7 @@ const ProfileImage = chakra(Image, {
 
 const Home = () => (
   <Layout>
+
     <Box display={{ md: "flex" }}>
       <Box flexGrow={1} mt={5}>
         <Heading as="h2" variant="page-title">
@@ -31,34 +32,10 @@ const Home = () => (
           some title
         </p>
       </Box>
-      <Box
-        flexShrink={0}
-        mt={{ base: 4, md: 0 }}
-        ml={{ md: 6 }}
-        textAlign="center"
-      >
-        <Box
-          borderColor="whiteAlpha.800"
-          borderWidth={2}
-          borderStyle="solid"
-          w="250px"
-          h="250px"
-          mt={5}
-          display="inline-block"
-          borderRadius="25"
-          overflow="hidden"
-        >
-          <ProfileImage
-            src="/images/man.png"
-            alt="image"
-            borderRadius="none"
-            width="250"
-            height="250"
-          />
-        </Box>
-      </Box>
     </Box>
+
     <br />
+
     <Section delay={0.1}>
       <Paragraph>
         some text
