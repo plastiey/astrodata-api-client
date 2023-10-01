@@ -41,7 +41,6 @@ const Main = ({ children, router }) => {
         <AnimatePresence initial={true} exitBeforeEnter={false} mode="wait">
           {children}
         </AnimatePresence>
-
         <Footer />
       </Container>
     </Box>
