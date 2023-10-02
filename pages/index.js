@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
-import Chart from "../components/chart.js";
+import { Chart } from "../components/chart.js";
 
 const Home = () => (
   <Layout textAlign={"center"}>
@@ -21,9 +21,9 @@ const Home = () => (
           magneconn
         </Heading>
         <p>
-          open source | kenjitheman
+          
         </p>
-
+        <br />
         <Section delay={0.1} mb={5} >
           <Chart />
         </Section>
