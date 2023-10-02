@@ -93,7 +93,7 @@ const Navbar = (props) => {
 
           <LinkItem
             target="_blank"
-            href="https://github.com/kenjitheman/projx"
+            href="https://github.com/kenjitheman/wdcg_api"
             path={path}
             display="inline-flex"
             alignItems="center"
@@ -128,12 +128,12 @@ const Navbar = (props) => {
                 </MenuItem>
                 <MenuItem
                   as={MenuLink}
-                  href="https://github.com/projx"
+                  href="https://github.com/wdcg_api"
                   ml={5}
                 >
                   api
                 </MenuItem>
-                <MenuItem as={MenuLink} href="https://github.com/kenjitheman/projx.c" ml={5}>
+                <MenuItem as={MenuLink} href="https://github.com/kenjitheman/wdcg_api.c" ml={5}>
                   source code
                 </MenuItem>
               </MenuList>
