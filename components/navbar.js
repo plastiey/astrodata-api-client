@@ -82,7 +82,7 @@ const Navbar = (props) => {
             homepage
           </LinkItem>
 
-          <LinkItem href="info" path={path}>
+          <LinkItem href="/info" path={path}>
             info
           </LinkItem>
 
@@ -117,13 +117,13 @@ const Navbar = (props) => {
                 aria-label="Options"
               />
               <MenuList>
-                <MenuItem as={MenuLink} href="/" ml={5} >
+                <MenuItem as={MenuLink} href="/" ml={6} >
                   homepage
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/info" ml={5} >
+                <MenuItem as={MenuLink} href="/info" ml={6} >
                   info
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/about" ml={5} >
+                <MenuItem as={MenuLink} href="/about" ml={6} >
                   about us
                 </MenuItem>
                 <MenuItem
