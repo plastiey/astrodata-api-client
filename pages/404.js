@@ -15,7 +15,7 @@ const NotFound = () => {
       <Text>the page you are looking for was not found</Text>
       <Divider my={6} />
       <Box my={6} align="center">
-        <Button as={NextLink} href="/" colorScheme="pink">
+        <Button as={NextLink} href="/" color="_yellow">
           homepage
         </Button>
       </Box>
