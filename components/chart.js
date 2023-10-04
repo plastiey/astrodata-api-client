@@ -27,10 +27,6 @@ export const options = {
     legend: {
       position: 'top'
     },
-    title: {
-      display: true,
-      text: 'Hourly Equatorial Dst Values (REAL-TIME)',
-    },
   },
 };
 
@@ -40,16 +36,10 @@ export const data = {
   labels,
   datasets: [
     {
-      label: 'womans',
+      label: 'data',
       data: labels.map(() => faker.number.int({ min: -200, max: 0 })),
-      borderColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 93, 23)',
       backgroundColor: 'rgba(255, 99, 132, 0.5)',
-    },
-    {
-      label: 'mans',
-      data: labels.map(() => faker.number.int({ min: -243, max: 0 })),
-      borderColor: 'rgb(53, 162, 235)',
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
     },
   ],
 };
