@@ -17,19 +17,17 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import ThemeToggleButton from "./theme-toggle-button";
-import { IoLogoGithub } from "react-icons/io5";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
-  const active = path === href;
-  const inactiveColor = useColorModeValue("gray.800", "whiteAlpha.900");
   return (
     <Link
       as={NextLink}
       href={href}
       scroll={false}
-      p={2}
-      bg={active ? "grassTeal" : undefined}
-      color={active ? "#202023" : inactiveColor}
+      p={3}
+      color="_yellow"
+      fontWeight="regular"
+      fontSize="2xl"
       target={target}
       {...props}
     >
@@ -50,20 +48,20 @@ const Navbar = (props) => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue("#ffffff40", "#20202380")}
+      bg={useColorModeValue("#ffffff40", "#041116")}
       css={{ backdropFilter: "blur(10px)" }}
       zIndex={2}
       {...props}
     >
       <Container
         display="flex"
-        p={2}
-        maxW="container.md"
+        p={3}
+        maxW="container.lg"
         wrap="wrap"
         align="center"
         justify="space-between"
       >
-        <Flex align="center" mr={5}>
+        <Flex align="center">
           <Heading as="h1" size="lg" letterSpacing={"tighter"}>
             <Logo />
           </Heading>
@@ -75,33 +73,25 @@ const Navbar = (props) => {
           width={{ base: "full", md: "auto" }}
           alignItems="center"
           flexGrow={1}
-          mt={{ base: 4, md: 0 }}
+          mt={{ base: 3, md: 0 }}
+          ml={"20%"}
         >
 
           <LinkItem href="/" path={path}>
-            homepage
+            Home
           </LinkItem>
 
-          <LinkItem href="/info" path={path}>
-            info
+          <LinkItem href="https://github.com/kenjitheman/wdcg_api" path={path}>
+            Get API
           </LinkItem>
 
 
           <LinkItem href="/about" path={path}>
-            about us
+            About
           </LinkItem>
 
-          <LinkItem
-            target="_blank"
-            href="https://github.com/kenjitheman/wdcg_api"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
-          >
-            <IoLogoGithub />
-            api
+          <LinkItem href="/our-team" path={path}>
+            Our Team
           </LinkItem>
         </Stack>
 
@@ -117,24 +107,17 @@ const Navbar = (props) => {
                 aria-label="Options"
               />
               <MenuList>
-                <MenuItem as={MenuLink} href="/" ml={6} >
-                  homepage
+                <MenuItem as={MenuLink} href="/" ml={1} >
+                  Home
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/info" ml={6} >
-                  info
+                <MenuItem as={MenuLink} href="https://github.com/kenjitheman/wdcg_api" ml={1}>
+                  Get API
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/about" ml={6} >
-                  about us
+                <MenuItem as={MenuLink} href="/info" ml={1} >
+                  About
                 </MenuItem>
-                <MenuItem
-                  as={MenuLink}
-                  href="https://github.com/wdcg_api"
-                  ml={5}
-                >
-                  api
-                </MenuItem>
-                <MenuItem as={MenuLink} href="https://github.com/kenjitheman/wdcg_api.c" ml={5}>
-                  source code
+                <MenuItem as={MenuLink} href="/about" ml={1} >
+                  Our Team
                 </MenuItem>
               </MenuList>
             </Menu>
