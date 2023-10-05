@@ -13,10 +13,8 @@ import {
   MenuItem,
   MenuList,
   Stack,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import ThemeToggleButton from "./theme-toggle-button";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   return (
@@ -24,8 +22,9 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
       as={NextLink}
       href={href}
       scroll={false}
-      p={3}
+      p={2}
       color="_yellow"
+      fontFamily='Raleway, sans-serif'
       fontWeight="regular"
       fontSize="2xl"
       target={target}
@@ -48,21 +47,21 @@ const Navbar = (props) => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue("#ffffff40", "#041116")}
+      bg="_black"
       css={{ backdropFilter: "blur(10px)" }}
       zIndex={2}
       {...props}
     >
       <Container
         display="flex"
-        p={3}
-        maxW="container.lg"
+        p={2}
+        maxW="container.md"
         wrap="wrap"
         align="center"
         justify="space-between"
       >
         <Flex align="center">
-          <Heading as="h1" size="lg" letterSpacing={"tighter"}>
+          <Heading as="h1" size="2xl" letterSpacing={"tighter"}>
             <Logo />
           </Heading>
         </Flex>
@@ -74,12 +73,8 @@ const Navbar = (props) => {
           alignItems="center"
           flexGrow={1}
           mt={{ base: 3, md: 0 }}
-          ml={"20%"}
+          ml={"25%"}
         >
-
-          <LinkItem href="/" path={path}>
-            Home
-          </LinkItem>
 
           <LinkItem href="https://github.com/kenjitheman/wdcg_api" path={path}>
             Get API
@@ -96,8 +91,6 @@ const Navbar = (props) => {
         </Stack>
 
         <Box flex={1} align="right">
-          <ThemeToggleButton />
-
           <Box ml={2} display={{ base: "inline-block", md: "none" }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
@@ -107,16 +100,13 @@ const Navbar = (props) => {
                 aria-label="Options"
               />
               <MenuList>
-                <MenuItem as={MenuLink} href="/" ml={1} >
-                  Home
-                </MenuItem>
                 <MenuItem as={MenuLink} href="https://github.com/kenjitheman/wdcg_api" ml={1}>
                   Get API
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/info" ml={1} >
+                <MenuItem as={MenuLink} href="/about" ml={1} >
                   About
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/about" ml={1} >
+                <MenuItem as={MenuLink} href="/our-team" ml={1} >
                   Our Team
                 </MenuItem>
               </MenuList>
