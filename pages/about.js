@@ -4,13 +4,13 @@ import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 
 const About = () => (
-  <Layout title="magneconn - about us">
+  <Layout title="Magneconn | About Us">
     <Container>
       <Heading as="h1" fontSize={35} mt={12} mb={12} textAlign={"center"}>
         About Us
       </Heading>
       <Section delay={0.1} mb={7} >
-        <Paragraph>
+        <Paragraph >
           Welcome to our little project!
         </Paragraph>
       </Section>
