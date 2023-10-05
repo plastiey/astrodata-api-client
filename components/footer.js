@@ -1,4 +1,4 @@
-import { Box, Link, Button } from "@chakra-ui/react";
+import { Box, IconButton } from "@chakra-ui/react";
 import { IoLogoGithub } from "react-icons/io5";
 
 const Footer = () => {
@@ -8,6 +8,8 @@ const Footer = () => {
       justifyContent="center"
       alignItems="center"
       fontSize="sm"
+      fontFamily="Raleway, sans-serif"
+      fontWeight="regular"
       color="_yellow"
       position="fixed"
       bottom="0"
@@ -16,22 +18,22 @@ const Footer = () => {
       padding="1rem"
       zIndex="999"
     >
-      <span>&copy;Magneconn | Next Space Lab | {new Date().getFullYear()}</span>
-      <Link
+      <span>
+        &copy;Magneconn | Next Space Lab | {new Date().getFullYear()}
+      </span>
+      <IconButton
+        as="a"
         href="https://github.com/kenjitheman/projx.c"
         target="_blank"
+        variant="ghost"
+        aria-label="GitHub"
+        icon={<IoLogoGithub />}
+        color="_yellow"
+        fontSize="2.4rem"
         position="absolute"
-        bottom="2.5"
-        right="4"
-      >
-        <Button
-          variant="ghost"
-          color="_yellow"
-          fontSize="2.5rem"
-          leftIcon={<IoLogoGithub />}
-        >
-        </Button>
-      </Link>
+        bottom="0.5rem"
+        right="0.5rem"
+      />
     </Box>
   );
 };
