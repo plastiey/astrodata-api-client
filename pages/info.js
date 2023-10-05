@@ -4,7 +4,8 @@ import Section from '../components/section'
 import Paragraph from "../components/paragraph"
 
 const Info = () => (
-  <Layout title="magneconn - info">
+  <Layout title="Magneconn | Info">
+
     <Container>
       <Heading as="h1" fontSize={35} mt={10} mb={5} textAlign={"center"}>
         magneconn team
