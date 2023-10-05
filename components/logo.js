@@ -1,25 +1,16 @@
 import Link from "next/link";
-import { Text, useColorModeValue } from "@chakra-ui/react";
-//import FootprintIcon from "./icons/footprint";
+import { Text } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 
 const LogoBox = styled.span`
   font-weight: bold;
-  font-size: 35px;
-  display: inline-flex;
-  align-items: center;
-  height: 34px;
+  font-size: 40px;
+  display: flex;
+  align-items: flex-start;
+  height: 25px;
   line-height: 20px;
   color: "_yellow";
-  padding: 5px;
-
-  > svg {
-    transition: 200ms ease;
-  }
-
-  &:hover > svg {
-    transform: rotate(360deg);
-  }
+  padding-bottom: 1.5rem;
 `;
 
 const Logo = () => {
@@ -29,11 +20,11 @@ const Logo = () => {
         <LogoBox>
           <Text
             color="_yellow"
-            fontFamily='M PLUS Rounded 1c", sans-serif'
+            fontFamily='Raleway, sans-serif'
             fontWeight="bold"
             ml={3}
           >
-            magneconn
+            Magneconn
           </Text>
         </LogoBox>
       </Link>
