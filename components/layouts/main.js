@@ -6,16 +6,16 @@ import Footer from "../footer";
 
 const Main = ({ children, router }) => {
   return (
-    <Box as="main" pb={8}>
+    <Box as="main">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="magneconn"
+          content="Magneconn"
         />
         <meta
           name="author"
-          content="magneconn team"
+          content="Magneconn Team"
         />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -25,20 +25,20 @@ const Main = ({ children, router }) => {
         <link rel="icon" type="image/png" href="/favicon-16x16.png" />
         <meta
           property="og:site_name"
-          content="magneconn"
+          content="Magneconn"
         />
         <meta
           name="og:title"
-          content="magneconn"
+          content="Magneconn"
         />
         <meta property="og:type" content="website" />
-        <title>magneconn</title>
+        <title>Magneconn</title>
       </Head>
 
       <NavBar path={router.asPath} />
 
       <Container maxW="container.md" pt={14}>
-        <AnimatePresence initial={true} exitBeforeEnter={false} mode="wait">
+        <AnimatePresence initial={true} mode="wait">
           {children}
         </AnimatePresence>
         <Footer />
