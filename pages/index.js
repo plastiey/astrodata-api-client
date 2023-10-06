@@ -1,60 +1,77 @@
+import React, { useState } from 'react';
 import {
   Box,
   Button,
   Link,
   List,
   Heading,
+  Center,
+  Flex,
 } from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
 import { Chart } from "../components/chart.js";
+import { Chart2 } from "../components/chart2.js";
+import { Chart3 } from "../components/chart3.js";
+import Paragraph from '../components/paragraph'
 
-const Home = () => (
-  <Layout textAlign={"center"} w={"100%"} height={"100%"}>
-    <Box display={{ md: "unset" }}>
-      <Box flexGrow={1} mt={110} textAlign={"center"}>
-        <Section delay={0.1}>
-          <Heading as="h2" fontFamily={"Raleway, sans-serif"} fontWeight={"regular"} mb={"1.5rem"} color={"_yellow"}>
-            Amplitude Chart (DST)
-          </Heading>
-          <Chart />
-        </Section>
+const Home = () => {
+  const [selectedChart, setSelectedChart] = useState("chart1");
+
+  const handleChartSwitch = (chartName) => {
+    setSelectedChart(chartName);
+  };
+
+  const chartWidth = 1200;
+  const chartHeight = 600;
+
+  return (
+    <Layout textAlign={"center"} w={"100%"} height={"100%"}>
+      <Box display={{ md: "unset" }}>
+        <Box flexGrow={1} mt={120} textAlign={"center"} >
+          <Section delay={0.1}>
+            <Heading as="h2" fontFamily={"Ubuntu, sans-serif"} fontWeight={"regular"} mb={"1.5rem"} color={"_yellow"}>
+              Amplitude Chart (DST)
+            </Heading>
+            <Center>
+              {selectedChart === "chart1" ? <Chart width={chartWidth} height={chartHeight} /> : selectedChart === "chart2" ? <Chart2 width={chartWidth} height={chartHeight} /> : <Chart3 width={chartWidth} height={chartHeight} />}
+            </Center>
+          </Section>
+        </Box>
+        <Box>
+          <Flex justifyContent="center" alignItems="center" alignContent={"space-between"}>
+            <List style={{ textAlign: "center" }}>
+              <Link>
+                <Button mr={10} color="_yellow" onClick={() => handleChartSwitch("chart1")}>
+                  chart_1
+                </Button>
+              </Link>
+              <Link>
+                <Button mr={10} color="_yellow" onClick={() => handleChartSwitch("chart2")}>
+                  chart_2
+                </Button>
+              </Link>
+              <Link mr={10}>
+                <Button color="_yellow" onClick={() => handleChartSwitch("chart3")}>
+                  chart_3
+                </Button>
+              </Link>
+              <Link mr={10}>
+                <Button color="_yellow" onClick={() => handleChartSwitch("chart3")}>
+                  chart_3
+                </Button>
+              </Link>
+              <Link>
+                <Button color="_yellow" onClick={() => handleChartSwitch("chart3")}>
+                  chart_3
+                </Button>
+              </Link>
+            </List>
+          </Flex>
+        </Box>
       </Box>
-      <br />
-      <Section delay={0.3}>
-        <List style={{ textAlign: "center" }}>
-
-          <Link mr={12}>
-            <Button
-              color="_yellow"
-            >
-              chart_1
-            </Button>
-          </Link>
-
-
-          <Link mr={12}>
-            <Button
-              color="_yellow"
-            >
-              chart_2
-            </Button>
-          </Link>
-
-          <Link>
-            <Button
-              color="_yellow"
-            >
-              chart_2
-            </Button>
-          </Link>
-
-        </List>
-      </Section>
-
-    </Box>
-  </Layout >
-);
+    </Layout >
+  );
+};
 
 export default Home;
-export { getServerSideProps } from "../components/chakra";
