@@ -38,7 +38,7 @@ export const options = {
   },
 };
 
-export function Chart() {
+export function Chart2() {
   const [data, setData] = useState(generateFakeData());
 
   useEffect(() => {

@@ -10,7 +10,7 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import { useEffect, useState } from 'react';
-import { fetchDataFromApi, generateFakeData } from './core'
+import { fetchDataFromApi } from './core';
 
 ChartJS.register(
   CategoryScale,
@@ -38,11 +38,11 @@ export const options = {
   },
 };
 
-export function Chart() {
-  const [data, setData] = useState(generateFakeData());
+export function Chart3() {
+  const [data, setData] = useState({});
 
   useEffect(() => {
-    fetchDataFromApi()
+    fetchDataFromApi('http://localhost:8080/api/bz/6h')
       .then((apiData) => {
         setData(apiData);
       })
