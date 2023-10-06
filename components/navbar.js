@@ -24,7 +24,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
       scroll={false}
       p={2}
       color="_yellow"
-      fontFamily='Raleway, sans-serif'
+      fontFamily='Ubuntu, sans-serif'
       fontWeight="regular"
       fontSize="2xl"
       target={target}
