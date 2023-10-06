@@ -42,27 +42,28 @@ const Home = () => {
           <Flex justifyContent="center" alignItems="center" alignContent={"space-between"}>
             <List style={{ textAlign: "center" }}>
               <Link>
-                <Button mr={10} color="_yellow" onClick={() => handleChartSwitch("chart1")}>
+                <Button
+                  mr={10}
+                  colorScheme={selectedChart === "chart1" ? "orange" : undefined}
+                  onClick={() => handleChartSwitch("chart1")}
+                >
                   chart_1
                 </Button>
               </Link>
               <Link>
-                <Button mr={10} color="_yellow" onClick={() => handleChartSwitch("chart2")}>
+                <Button
+                  mr={10}
+                  colorScheme={selectedChart === "chart2" ? "orange" : undefined}
+                  onClick={() => handleChartSwitch("chart2")}
+                >
                   chart_2
                 </Button>
               </Link>
               <Link mr={10}>
-                <Button color="_yellow" onClick={() => handleChartSwitch("chart3")}>
-                  chart_3
-                </Button>
-              </Link>
-              <Link mr={10}>
-                <Button color="_yellow" onClick={() => handleChartSwitch("chart3")}>
-                  chart_3
-                </Button>
-              </Link>
-              <Link>
-                <Button color="_yellow" onClick={() => handleChartSwitch("chart3")}>
+                <Button
+                  colorScheme={selectedChart === "chart3" ? "orange" : undefined}
+                  onClick={() => handleChartSwitch("chart3")}
+                >
                   chart_3
                 </Button>
               </Link>
