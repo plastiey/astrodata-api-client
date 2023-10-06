@@ -20,7 +20,7 @@ const Logo = () => {
         <LogoBox>
           <Text
             color="_yellow"
-            fontFamily='Raleway, sans-serif'
+            fontFamily='Ubuntu, sans-serif'
             fontWeight="bold"
             ml={3}
           >
