@@ -2,7 +2,7 @@
 
 ## installation
 
-```sh
+```
 git clone https://github.com/kenjitheman/astrodata-api-client
 ```
 
