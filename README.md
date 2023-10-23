@@ -1,14 +1,14 @@
-## プロジェクト X のクライアント要素
+# astrodata-api-client
 
 ## installation
 
-```
-git clone https://github.com/kenjitheman/projx.c
+```sh
+git clone https://github.com/kenjitheman/
 ```
 
 - install all dependencies
 
-```
+```sh
 yarn install
 ```
 
@@ -16,13 +16,13 @@ yarn install
 
 - run
 
-```
+```sh
 yarn start
 ```
 
 - run in dev mode
 
-```
+```sh
 yarn dev
 ```
 
