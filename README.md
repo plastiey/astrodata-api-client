@@ -2,8 +2,8 @@
 
 ## installation
 
-```sh
-git clone https://github.com/kenjitheman/
+```
+git clone https://github.com/kenjitheman/astrodata-api-client
 ```
 
 - install all dependencies
