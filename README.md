@@ -1,36 +1,36 @@
-# astrodata-api-client
+# Astrodata API Client
 
-## installation
+## Installation
 
-```
+```sh
 git clone https://github.com/kenjitheman/astrodata-api-client
 ```
 
-- install all dependencies
+- To install all dependencies:
 
 ```sh
 yarn install
 ```
 
-## usage
+## Usage
 
-- run
+- To run:
 
 ```sh
 yarn start
 ```
 
-- run in dev mode
+- To run in dev mode:
 
 ```sh
 yarn dev
 ```
 
-## contributing
+## Contributing
 
-- pull requests are welcome, for major changes, please open an issue first to
-  discuss what you would like to change
+- Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
 
-## license
+## License
 
-- [MIT](https://choosealicense.com/licenses/mit/)
+- [MIT](./LICENSE)

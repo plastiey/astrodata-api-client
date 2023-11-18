@@ -1,8 +1,8 @@
 const Fonts = () => (
-  <style jsx global>
-    {`
+    <style jsx global>
+        {`
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap');
   `}
-  </style>
+    </style>
 );
 export default Fonts;

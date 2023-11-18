@@ -14,22 +14,22 @@ const LogoBox = styled.span`
 `;
 
 const Logo = () => {
-  return (
-    (
-      <Link href="/" scroll={false}>
-        <LogoBox>
-          <Text
-            color="_yellow"
-            fontFamily='Ubuntu, sans-serif'
-            fontWeight="bold"
-            ml={3}
-          >
-            Magneconn
-          </Text>
-        </LogoBox>
-      </Link>
-    )
-  );
+    return (
+        (
+            <Link href="/" scroll={false}>
+                <LogoBox>
+                    <Text
+                        color="_yellow"
+                        fontFamily='Ubuntu, sans-serif'
+                        fontWeight="bold"
+                        ml={3}
+                    >
+                        Magneconn
+                    </Text>
+                </LogoBox>
+            </Link>
+        )
+    );
 };
 
 export default Logo;
